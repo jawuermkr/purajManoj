@@ -8,10 +8,12 @@ void setup() {
   
   pinMode(triger, OUTPUT);
   pinMode(echo, INPUT);
-  servoMotor.attach(9);
+  servoMotor.attach(10);
   Serial.begin(9600);  
 }
 void loop() {
+
+  servoMotor.write(0);
   
   digitalWrite(triger, LOW);
   delayMicroseconds(2);
